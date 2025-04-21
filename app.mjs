@@ -4,7 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import connectToDb from "./db/db.js";
 import authRoutes from "./routes/authRoutes.js";
- const port = 5000
+
 dotenv.config();
 
 const app = express();
@@ -32,9 +32,16 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+  console.log(`✅ Server is live on port ${port}`);
+});
+
 // const PORT = process.env.PORT || 5000;
 // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+// const port = 5000
+// app.listen(port, () => {
+//     console.log(`Example app listening on port ${port}`)
+//   });
