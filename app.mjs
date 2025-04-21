@@ -29,6 +29,9 @@ app.use(express.json());
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
 // })
+app.get("/", (req, res) => {
+    res.send("✅ Backend is live and working!");
+  });
 
 app.use("/api/auth", authRoutes);
 
