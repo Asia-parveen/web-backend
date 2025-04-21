@@ -15,7 +15,7 @@ app.use(
 	cors({
 		origin: ['http://localhost:5174',
 			 'http://localhost:5173',
-             'https://web-frontend-rho-flax.vercel.app/',
+             'https://web-frontend-cmmjljtdq-asia-parveens-projects.vercel.app',
 			
 			
 			],
